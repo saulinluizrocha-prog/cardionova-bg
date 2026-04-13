@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 if ( !isset($_POST['name']) || !isset($_POST['phone']) ){
     if (isset($_SERVER['HTTP_REFERER'])){
         header('Location: '.$_SERVER['HTTP_REFERER']);
@@ -165,7 +166,7 @@ class CApiConnector
         $curl_errno = curl_errno($ch);
         $http_code  = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-        curl_close ($ch);
+        @curl_close ($ch);
 
         $response = array(
             'error'      => $curl_error,
