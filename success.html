@@ -176,6 +176,30 @@
             transform: translateY(-3px);
             box-shadow: 0 15px 25px rgba(8, 131, 176, 0.4);
         }
+
+        .security-badges {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .security-badges img {
+            height: 40px;
+            opacity: 0.8;
+            filter: grayscale(10%);
+            transition: all 0.3s ease;
+        }
+
+        .security-badges img:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
         
         @media (max-width: 600px) {
             .success-card {
@@ -224,6 +248,13 @@
         </div>
 
         <a href="/" class="back-btn">Обратно в сайта</a>
+
+        <div class="security-badges">
+            <img src="img/medal-1.png" alt="Norton Secure">
+            <img src="img/medal-2.png" alt="McAfee Secure">
+            <img src="img/medal-3.png" alt="Safe Checkout">
+            <img src="img/medal-4.png" alt="SSL">
+        </div>
     </div>
 
 </body>
